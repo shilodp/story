@@ -3,5 +3,5 @@ function loadFunction() {
 		$.each(data,function(key, val) {
 			$('h2')=(data.title);
 		});
-	};
+	});
     }
