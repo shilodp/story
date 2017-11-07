@@ -14,7 +14,7 @@ chapthree = {text:"Третья глава"};
 str = JSON.stringify(chapthree);
 chapthree=JSON.parse(str);
 var someURL;
-var someTitle;
+var someVar;
 
 function loadFunction() {
     $.getJSON('story.json', function (data){
@@ -24,7 +24,7 @@ function loadFunction() {
         for (var i=0; i<data.urls.length;i++){
             someURL=data.urls[i];
             $.getJSON(someURL, function (text) {
-                var someVar=text.text
+                someVar=text.text
             });
             var newChap = document.createElement('p');
             newChap.innerHTML = someVar;
