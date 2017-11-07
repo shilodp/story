@@ -9,7 +9,7 @@ function loadFunction() {
             $.getJSON(someURL, function (chapter) {
                 var someVar=chapter.text;
                 var newChap = document.createElement('p');
-                newChap.innerHTML = someVar;
+                newChap.innerHTML = ("Глава "+(i+1)+": "+someVar);
                 text.appendChild(newChap);
             });
         }
