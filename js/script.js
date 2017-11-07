@@ -3,9 +3,10 @@ function loadFunction() {
         title.innerHTML=data.title;
         document.getElementById("loading-title").style.display='none';
         document.getElementById("loading-text").style.display='block';
-        var someVar;
+
         for (var i=0; i<data.urls.length;i++){
             var someURL=data.urls[i];
+            var someVar;
             $.getJSON(someURL, function (text) {
                 someVar=text.text
             });
