@@ -1,3 +1,10 @@
+
+@keyframes spinner {
+    100% {
+        transform: rotate(-3600deg);
+    }
+}
+
 html{
     width: 100vw;
     height: 100vh;
@@ -5,4 +12,24 @@ html{
 body{
     width: 100vw;
     height: 100vh;
+}
+.ol{
+    list-style-type: none;
+}
+#loading-title{
+    width: 50px;
+    height: 50px;
+    animation: spinner 18s;
+    background: url("../img/loading.png") center center no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+}
+#loading-text{
+    display: none;
+    width: 50px;
+    height: 50px;
+    animation: spinner 18s;
+    background: url("../img/loading.png") center center no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
 }
