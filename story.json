@@ -1,8 +1,8 @@
 {
   "urls": [
-    "some URL 1",
-    "some URL 2",
-    "some URL 3"
+    "chapone.json",
+    "chaptwo.json",
+    "chapthree.json"
   ],
   "title": "Заголовок"
 }
