@@ -4,18 +4,6 @@
         transform: rotate(-3600deg);
     }
 }
-
-html{
-    width: 100vw;
-    height: 100vh;
-}
-body{
-    width: 100vw;
-    height: 100vh;
-}
-.ol{
-    list-style-type: none;
-}
 #loading-title{
     width: 50px;
     height: 50px;
