@@ -8,7 +8,7 @@ function loadFunction() {
             var someURL=data.urls[i];
             var someVar;
             $.getJSON(someURL, function (text) {
-                someVar=text.text
+                someVar=text.text;
             });
             var newChap = document.createElement('p');
             newChap.innerHTML = someVar;
