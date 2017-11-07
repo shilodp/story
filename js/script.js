@@ -9,11 +9,12 @@ function loadFunction() {
             var someVar;
             $.getJSON(someURL, function (chapter) {
                 someVar=chapter.text;
+                var newChap = document.createElement('p');
+                newChap.innerHTML = someVar;
+                text.appendChild(newChap);
             });
-            var newChap = document.createElement('p');
-            newChap.innerHTML = someVar;
-            text.appendChild(newChap);
-        };
+            
+        }
 
         document.getElementById("loading-text").style.display='none';
     });
