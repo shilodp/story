@@ -35,15 +35,14 @@ function loadFunction() {
                         var story=JSON.parse(response);
                         var someVar=story.text;
                         var newChap = document.createElement('p');
-                        n++;
-                        newChap.innerHTML = ("Глава "+n+": "+someVar);
+                        newChap.innerHTML = (someVar);
                         text.appendChild(newChap);
+                        document.getElementById("loading-text").style.display='none';
                     },
                     function(error) {
                         console.error("Failed!", error);
                         document.getElementById("loading-text").style.display='none';
-                    },
-                document.getElementById("loading-text").style.display='none';
+                    }
                 )
             }
         },
