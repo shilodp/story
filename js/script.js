@@ -50,12 +50,12 @@ function check() {
             document.getElementById("loading-title").style.display='none';
             document.getElementById("loading-text").style.display='block';
             var n=0;
-
-            console.log("Success!", response);
-
             for (var i=0; i<data.urls.length;i++){
                 get(data.urls[i]).then(
                     function (response) {
+
+                        console.log("Success!", response);
+
                         var story=JSON.parse(response);
                         var someVar=story.text;
                         var newChap = document.createElement('p');
