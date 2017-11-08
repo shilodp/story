@@ -29,9 +29,6 @@ function loadFunction() {
             for (var i=0; i<data.urls.length;i++){
                 get(data.urls[i]).then(
                     function (response) {
-
-                        console.log("Success!", response);
-
                         var story=JSON.parse(response);
                         var someVar=story.text;
                         var newChap = document.createElement('p');
