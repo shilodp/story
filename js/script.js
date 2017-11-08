@@ -43,9 +43,31 @@ function get(url) {
 }
 
 function check() {
-    get('story.json').then(function(response) {
-        console.log("Success!", response);
-    }, function(error) {
+    get('story.json').then(
+        function(response) {
+            title.innerHTML=response.title;
+            document.getElementById("loading-title").style.display='none';
+            document.getElementById("loading-text").style.display='block';
+            var n=0;
+
+            console.log("Success!", response);
+
+            for (var i=0; i<response.urls.length;i++){
+                get(response.urls[i]).then(
+                    function (response) {
+                        var someVar=response.text;
+                        var newChap = document.createElement('p');
+                        n++;
+                        newChap.innerHTML = ("Глава "+n+": "+someVar);
+                        text.appendChild(newChap);
+                    },
+                    function(error) {
+                        console.error("Failed!", error);
+                    }
+                )
+            }
+        },
+        function(error) {
         console.error("Failed!", error);
     });
 }
