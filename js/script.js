@@ -65,11 +65,13 @@ function check() {
                     },
                     function(error) {
                         console.error("Failed!", error);
+                        document.getElementById("loading-text").style.display='none';
                     }
                 )
             }
         },
         function(error) {
         console.error("Failed!", error);
+        document.getElementById("loading-text").style.display='none';
     });
 }
