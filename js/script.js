@@ -56,8 +56,8 @@ function check() {
             for (var i=0; i<data.urls.length;i++){
                 get(data.urls[i]).then(
                     function (response) {
-                        var text=JSON.parse(response);
-                        var someVar=text.text;
+                        var story=JSON.parse(response);
+                        var someVar=story.text;
                         var newChap = document.createElement('p');
                         n++;
                         newChap.innerHTML = ("Глава "+n+": "+someVar);
