@@ -45,17 +45,19 @@ function get(url) {
 function check() {
     get('story.json').then(
         function(response) {
-            title.innerHTML=response.title;
+            var data=JSON.parse(response);
+            title.innerHTML=data.title;
             document.getElementById("loading-title").style.display='none';
             document.getElementById("loading-text").style.display='block';
             var n=0;
 
             console.log("Success!", response);
 
-            for (var i=0; i<response.urls.length;i++){
-                get(response.urls[i]).then(
+            for (var i=0; i<data.urls.length;i++){
+                get(data.urls[i]).then(
                     function (response) {
-                        var someVar=response.text;
+                        var text=JSON.parse(response);
+                        var someVar=text.text;
                         var newChap = document.createElement('p');
                         n++;
                         newChap.innerHTML = ("Глава "+n+": "+someVar);
